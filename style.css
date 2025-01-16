@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    background: rgb(16, 106, 61);
+    font-family: "PT Sans", serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 45px;
+    font-size: larger;
+}
+nav ul li{
+    padding: 0 14px;
+}
+nav ul li:hover{
+    color: green;
+    cursor:pointer;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+}
+.logo img{
+    width: 34px;
+    padding: 5px;
+}
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    width: 75%;
+    display: flex;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 25px;
+    background-image: url(bg.jpg);
+    background-position: bottom;
+    background-size: cover;
+    align-items: center;
+}
+.songlist h2{
+    padding-left: 80px;
+    text-decoration-line: underline;
+}
+.songitem{
+    display: flex;
+    height: 50px;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.songitem img{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 0 12px;
+}
+.songitem i{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.songitem i:hover{
+    color: green;
+}
+.bottom{
+    position: sticky;
+    height: 80px;
+    background-color: black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icons{
+    margin-top: 15px;
+}
+.icons i{
+    padding-right: 10px;
+}
+.icons i:hover{
+    cursor: pointer;
+}
+#myProgressbar{
+    width: 70vw;
+}
+.songinfo{
+    position:absolute;
+    color: white;
+    left: 15vw;
+    margin-top: 35px;
+    font-weight: bolder;
+    text-decoration-line: underline;
+}
+.songinfo img{
+    margin-right: 8px;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
