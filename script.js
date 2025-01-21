@@ -52,26 +52,30 @@ myProgressBar.addEventListener('change',()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
 
+
 //Playing songs by clicking on button ahead
-const makeAllPlays = (songIndex)=>{
-    console.log(songIndex);
-    Array.from(document.getElementById(songIndex)).forEach((element,i)=>{
-        console.log("hello",element.classList);
-        element.classList.remove("fa-circle-play");
-        element.classList.add("fa-circle-pause");
-    })
-}
+const makeAllPlays = (songIndex) => {
+  const items = document.querySelectorAll(".songItemPlay");
+  items.forEach((element) => {
+    // console.log(element);
+    if (element.classList.contains("fa-circle-pause")) {
+      element.classList.remove("fa-circle-pause");
+      element.classList.add("fa-circle-play");
+    }
+  });
+  const _element = document.getElementById(songIndex);
+  _element.classList.remove("fa-circle-play");
+  _element.classList.add("fa-circle-pause");
+};
 
 //Playing songs by clicking on button ahead
 
 Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
     // console.log(element);
-    // prevSongIndex = element;
     element.addEventListener('click', (e)=>{
         songIndex = parseInt(e.target.id);
         makeAllPlays(songIndex);
         // console.log(e.target.id);
-
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
         audioElement.src = `songs/${songIndex+1}.mp3`;

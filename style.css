@@ -2,7 +2,7 @@
 
 body{
     background: rgb(16, 106, 61);
-    font-family: "PT Sans", serif;;
+    font-family: "PT Sans", serif;
 }
 
 *{
@@ -21,7 +21,15 @@ nav ul{
 nav ul li{
     padding: 0 14px;
 }
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
 nav ul li:hover{
+    color: green;
+    cursor:pointer;
+}
+nav ul li a:hover{
     color: green;
     cursor:pointer;
 }
