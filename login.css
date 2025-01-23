@@ -10,7 +10,7 @@
     height: 100vh;
     background-color: rgb(16, 106, 61);
 }
-.container i{
+.cross{
     transform: translate(1440px,20px);
     color: black;
 }
